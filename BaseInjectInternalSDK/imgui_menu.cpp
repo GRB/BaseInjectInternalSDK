@@ -46,8 +46,6 @@ void im_gui_menu::show()
 		ImGui::EndTabItem();
 	}
 
-	ImGui::EndTabBar();
-
 	ImGui::End();
 }
 
