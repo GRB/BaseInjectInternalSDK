@@ -34,6 +34,7 @@ void im_gui_menu::show()
 	ImGui::Begin(buf, nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_NoCollapse);
 	ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
 
+	ImGui::BeginTabBar("Settings#left_tabs_bar", ImGuiTabBarFlags_Reorderable | ImGuiTabBarFlags_NoTooltip);
 
 	if (ImGui::BeginTabItem("Options")) {
 		if (ImGui::Button("Save Settings")) im_gui_settings::save_settings(); ImGui::SameLine(); if (ImGui::Button("Load Settings")) im_gui_settings::load_settings();
@@ -45,6 +46,8 @@ void im_gui_menu::show()
 
 		ImGui::EndTabItem();
 	}
+
+	ImGui::EndTabBar();
 
 	ImGui::End();
 }
