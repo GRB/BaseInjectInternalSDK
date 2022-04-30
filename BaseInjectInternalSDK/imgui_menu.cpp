@@ -27,7 +27,7 @@ void toggle_button(const char* str_id, bool* v)
 
 void im_gui_menu::show()
 {
-	char buf[100];
+	char buf[200];
 	sprintf(buf, "CompanyName - ProductName             FPS: %0.f             Build Date: %s @ %s###MenuTitle", ImGui::GetIO().Framerate, __DATE__, __TIME__);
 
 	ImGui::SetNextWindowSize(ImVec2(680, 600));
